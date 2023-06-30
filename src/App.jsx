@@ -37,8 +37,12 @@ function App() {
       ) {
         calculatedYear--;
         calculatedMonth = 12 - month + currentMonth;
-        calculatedDay = currentDay - day;
-      } else {
+        calculatedDay = currentDay + (30 - day);
+      } else if (currentDay < day) {
+        calculatedMonth = currentMonth - month;
+        calculatedDay = currentDay + (30 - day);
+      }
+      else {
         calculatedMonth = currentMonth - month;
         calculatedDay = currentDay - day;
       }
