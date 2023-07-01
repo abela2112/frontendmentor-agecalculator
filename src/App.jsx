@@ -61,19 +61,18 @@ function App() {
         <form className='p-3' onSubmit={calculateAge}>
           <div className='flex flex-row gap-4 w-[30rem] max-[375px]:w-full'>
             <div className='flex flex-col gap-1'>
-              <label htmlFor='day' className={`text-lg uppercase font-bold ${dayError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Day</label>
+              <label htmlFor='day' className={`text-sm uppercase font-bold ${dayError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Day</label>
               <input id='day' className={`border py-2 px-3 text-SmokeyGrey text-3xl w-full font-bold rounded-md outline-none focus:border-2 focus:border-purple-300 focus:text-black spin-button-none ${dayError ? "border-lightRed" : 'border-lightGray'}`} type="number" placeholder='DD' onChange={(e) => setDay(e.target.value)} />
-
               <span className='text-lightRed italic mt-1 text-sm'>{dayError ? "must be a valid day" : ""}</span>
             </div>
             <div className='flex flex-col gap-1'>
-              <label htmlFor='month' className={`text-lg uppercase font-bold ${monthError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Month</label>
+              <label htmlFor='month' className={`text-sm uppercase font-bold ${monthError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Month</label>
               <input id='month' className={`border py-2 px-3 text-SmokeyGrey text-3xl w-full font-bold rounded-md outline-none focus:border-2 focus:border-purple-300 focus:text-black spin-button-none`} type="number" placeholder='MM' onChange={(e) => setMonth(e.target.value)} />
               <span className='text-lightRed italic mt-1 text-sm'>{monthError ? "must be a valid month" : ""}</span>
             </div>
             <div className='flex flex-col gap-1'>
-              <label htmlFor='year' className={`text-lg uppercase  font-bold ${YearError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Year</label>
-              <input id='year' className={`border py-2 px-3 text-SmokeyGrey text-3xl w-full font-bold rounded-md outline-none focus:border-2 focus:border-purple-300 focus:text-black spin-button-none ${YearError ? "border-lightRed" : 'border-lightGray'}`} type="number" placeholder='YY' onChange={(e) => setYear(e.target.value)} />
+              <label htmlFor='year' className={`text-sm uppercase  font-bold ${YearError ? "text-lightRed" : 'text-SmokeyGrey'}`}>Year</label>
+              <input id='year' className={`border py-2 px-3 text-SmokeyGrey text-3xl w-full font-bold rounded-md outline-none focus:border-2 focus:border-purple-300 focus:text-black spin-button-none ${YearError ? "border-lightRed" : 'border-lightGray'}`} type="number" placeholder='YYYY' onChange={(e) => setYear(e.target.value)} />
               <span className='text-lightRed italic mt-1 text-sm'>{YearError ? "must be in the past" : ""}</span>
             </div>
           </div>
